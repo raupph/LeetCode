@@ -44,7 +44,7 @@ Only one valid answer exists. */
             complement = target - nums[i]; //calculates the complement of the num
     
             if(hashMap[complement] !== undefined){ //check is the complement already exists in the hashMap
-                return [i, hashMap[complement]]
+                return [hashMap[complement], i] // ordem correta: índice menor primeiro
             }
             hashMap[nums[i]] = i;
         }
